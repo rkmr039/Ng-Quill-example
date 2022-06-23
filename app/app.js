@@ -3,13 +3,18 @@
 // Declare app level module which depends on views, and core components
 var myAppModule = angular.module('myApp', [
   'ngRoute',
+  'myApp.view1',
   'ngQuill',
   'myApp.version'
 ]);
 myAppModule.config(['$locationProvider', 
-'$routeProvider','ngQuillConfigProvider', function($locationProvider, $routeProvider, ngQuillConfigProvider) {
-  //$locationProvider.hashPrefix('!');
+'$routeProvider', 'ngQuillConfigProvider', function($locationProvider, $routeProvider, ngQuillConfigProvider) {
+  $locationProvider.hashPrefix('!');
   ngQuillConfigProvider.set();
+  $routeProvider.when('/view1', {
+    templateUrl: 'view1/view1.html',
+    controller: 'View1Ctrl'
+  });
 
   //$routeProvider.otherwise({redirectTo: '/view1'});
 }]);

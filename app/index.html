@@ -21,7 +21,10 @@
     <body ng-app="myApp" ng-controller="AppCtrl">
         <h3>Default editor + Callbacks/Outputs in JS console</h3>
         {{changeDetected}}
-        <ng-quill-editor ng-model="title" on-editor-created="editorCreated(editor)" on-content-changed="contentChanged(editor, html, text)"></ng-quill-editor>
+        <a href="view1/view1.html">View</a>
+        <ng-quill-editor ng-model="title" 
+        on-editor-created="editorCreated(editor)" 
+        on-content-changed="contentChanged(editor, html, text)"></ng-quill-editor>
         <script src="lib/angular/angular.js"></script>
         <script src="lib/angular-route/angular-route.js"></script>
         <script src="app.js"></script>
